@@ -13,3 +13,4 @@ scaler = StandardScaler()
 # 3. Fit and transform on training data, then ONLY transform on test data
 x_train_scaled = scaler.fit_transform(x_train)
 x_test_scaled = scaler.transform(x_test)
+  
