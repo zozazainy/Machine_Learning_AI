@@ -9,3 +9,4 @@ import pandas as p
 #d=p.read_csv("aug_test.csv",skiprows=[0,3])
 d=p.read_csv("aug_test.csv",nrows=100)
 print (d)
+g=p.read_csv("zomato.csv",sep="\t",encoding="latin_1")
