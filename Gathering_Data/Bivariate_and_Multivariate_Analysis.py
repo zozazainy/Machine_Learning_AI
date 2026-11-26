@@ -61,4 +61,14 @@ pt.show()
 
 # lineplot (numerical - numerical) sepcial case of scatterplot
 
+new=flight.groupby('year').sum().reset_index()
+s.lineplot(x=new['year'],y=new['passengers'])
+pt.show()
 
+print(flight.pivot_table(values='passengers',index='month',columns='year'))
+
+s.heatmap(flight.pivot_table(values='passengers',index='month',columns='year'))
+pt.show()
+
+s.clustermap(flight.pivot_table(values='passengers',index='month',columns='year'))
+pt.show()

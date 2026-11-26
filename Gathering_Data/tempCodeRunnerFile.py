@@ -1,1 +1,51 @@
-displot
+# scatterplot (numerical-numerical)
+# s.scatterplot(
+#     x=tips['total_bill'],
+#     y=tips['tip'],
+#     hue=tips['sex'],
+#     style=tips['smoker'],
+#     size=tips['size']
+# )
+# pt.show()
+
+# # barPlot(numerical - categorical)
+
+# s.barplot(
+#     x=titanic['Pclass'],
+#     y=titanic['Age'],
+#     hue=titanic['Sex'])
+# pt.show()
+
+# # boxPlot (numerical - categorical)
+
+# s.boxplot(x=titanic['Sex'],y=titanic['Age'],hue=titanic['Survived'])
+# pt.show()
+
+# # distplot (numerical - categorical)
+# # s.distplot(titanic['Age'])
+
+# s.distplot(titanic[titanic['Survived']==0]['Age'],hist=False)
+# s.distplot(titanic[titanic['Survived']==0]['Age'],hist=False)
+# pt.show()
+
+# # heatMap (categorical - categorical)
+# s.heatmap(p.crosstab(titanic['Pclass'],titanic['Survived']))
+# pt.show()
+# (titanic.groupby('Pclass')['Survived'].mean() * 100).plot(kind='bar')
+# pt.show()
+
+# print(titanic.groupby('Sex')['Survived'].mean() * 100)
+
+# # clustermap (categorical-categorical)
+
+# print (p.crosstab(titanic['SibSp'],titanic['Survived']))
+
+# s.clustermap(p.crosstab(titanic['SibSp'],titanic['Survived']))
+# pt.show()
+
+# # pairplot collection of scatterplot
+ 
+# s.pairplot(iris,hue='species')
+# pt.show()
+
+# # lineplot (numerical - numerical) sepcial case of scatterplot
