@@ -1,10 +1,20 @@
 import pandas  as p
 import seaborn as s
+import matplotlib.pyplot as pt
 
 titanic=p.read_csv("titanic.csv")
-tips = s.load_dataset("tips.csv")
-flight = s.load_dataset("flights.csv")
-iris=s.load_dataset("IRIS.csv")
+tips = p.read_csv("tips.csv")
+flight = p.read_csv("flights.csv")
+iris=p.read_csv("IRIS.csv")
+
+tips.head()
 
 # scatterplot (numerical-numerical)
-s.scatterplot(tips['total_bill'],tips['tip'])
+s.scatterplot(
+    x=tips['total_bill'],
+    y=tips['tip'],
+    hue=tips['sex'],
+    style=tips['smoker'],
+    size=tips['size']
+)
+pt.show()

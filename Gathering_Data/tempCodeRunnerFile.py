@@ -1,2 +1,3 @@
-sns.boxplot(d["Age"])
-# pt.show()
+
+scatterplot (numerical-numerical)
+s.scatterplot(tips['total_bill'],tips['tip'])
