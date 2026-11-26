@@ -18,3 +18,8 @@ s.scatterplot(
     size=tips['size']
 )
 pt.show()
+
+# barPlot(numerical - categorical)
+
+s.barplot(x=titanic['Pclass'],y=titanic['Age'])
+pt.show()
