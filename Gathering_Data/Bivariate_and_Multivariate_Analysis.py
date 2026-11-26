@@ -48,3 +48,17 @@ pt.show()
 print(titanic.groupby('Sex')['Survived'].mean() * 100)
 
 # clustermap (categorical-categorical)
+
+print (p.crosstab(titanic['SibSp'],titanic['Survived']))
+
+s.clustermap(p.crosstab(titanic['SibSp'],titanic['Survived']))
+pt.show()
+
+# pairplot collection of scatterplot
+ 
+s.pairplot(iris,hue='species')
+pt.show()
+
+# lineplot (numerical - numerical) sepcial case of scatterplot
+
+
