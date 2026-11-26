@@ -1,16 +1,28 @@
-print("Hello, Machine Learning!")
-print("My Python learning journey starts.")
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-# 1. Load your datasets
-train_df = pd.read_csv('aug_train.csv')  # Assuming you have a training file
-test_df = pd.read_csv('aug_test.csv')
+print("Hello, Machine Learning!")
+print("My Python learning journey starts.")
 
-# 2. Initialize the scaler
+# Load the available dataset
+df = pd.read_csv("aug_test.csv")
+
+# Select numerical columns
+x = df.select_dtypes(include="number")
+
+# Handle missing values
+x = x.fillna(x.mean())
+
+# Initialize scaler
 scaler = StandardScaler()
 
-# 3. Fit and transform on training data, then ONLY transform on test data
-x_train_scaled = scaler.fit_transform(x_train)
-x_test_scaled = scaler.transform(x_test)
-  
+# Scale the data
+x_scaled = scaler.fit_transform(x)
+
+print("Original data:")
+print(x.head())
+
+print("Scaled data:")
+print(x_scaled[:5])
+
+print("Machine Learning preprocessing completed!")
