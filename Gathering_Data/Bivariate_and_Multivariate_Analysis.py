@@ -29,3 +29,12 @@ pt.show()
 
 # boxPlot (numerical - categorical)
 
+s.boxplot(x=titanic['Sex'],y=titanic['Age'],hue=titanic['Survived'])
+pt.show()
+
+# distplot (numerical - categorical)
+# s.distplot(titanic['Age'])
+
+s.distplot(titanic[titanic['Survived']==0]['Age'])
+s.distplot(titanic[titanic['Survived']==0]['Age'])
+pt.show()
