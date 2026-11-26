@@ -42,4 +42,9 @@ pt.show()
 # heatMap (categorical - categorical)
 s.heatmap(p.crosstab(titanic['Pclass'],titanic['Survived']))
 pt.show()
-print (titanic.groupby('Pclass')['Survived'].mean())
+(titanic.groupby('Pclass')['Survived'].mean() * 100).plot(kind='bar')
+pt.show()
+
+print(titanic.groupby('Sex')['Survived'].mean() * 100)
+
+# clustermap (categorical-categorical)
