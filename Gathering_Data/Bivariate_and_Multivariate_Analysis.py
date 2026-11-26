@@ -35,6 +35,8 @@ pt.show()
 # distplot (numerical - categorical)
 # s.distplot(titanic['Age'])
 
-s.distplot(titanic[titanic['Survived']==0]['Age'])
-s.distplot(titanic[titanic['Survived']==0]['Age'])
+s.distplot(titanic[titanic['Survived']==0]['Age'],hist=False)
+s.distplot(titanic[titanic['Survived']==0]['Age'],hist=False)
 pt.show()
+
+# heatMap (categorical - categorical)
