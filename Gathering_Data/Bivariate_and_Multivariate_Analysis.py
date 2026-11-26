@@ -21,5 +21,11 @@ pt.show()
 
 # barPlot(numerical - categorical)
 
-s.barplot(x=titanic['Pclass'],y=titanic['Age'])
+s.barplot(
+    x=titanic['Pclass'],
+    y=titanic['Age'],
+    hue=titanic['Sex'])
 pt.show()
+
+# boxPlot (numerical - categorical)
+
