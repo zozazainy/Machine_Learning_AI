@@ -40,3 +40,5 @@ s.distplot(titanic[titanic['Survived']==0]['Age'],hist=False)
 pt.show()
 
 # heatMap (categorical - categorical)
+s.heatmap(p.crosstab(titanic['Pclass'],titanic['Survived']))
+pt.show()
